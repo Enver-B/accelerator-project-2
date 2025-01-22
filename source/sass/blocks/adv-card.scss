@@ -1,0 +1,339 @@
+.adv-card__wrap {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr;
+  max-width: 290px;
+  margin: 0;
+  padding: 0 9px;
+  padding-top: 19px;
+  padding-bottom: 19px;
+  background-color: $base-white;
+
+  @media (min-width: $tablet-width) {
+    min-width: 322px;
+    padding: 29px 19px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 378px;
+    min-height: 329px;
+    padding: 39px 20px 40px;
+  }
+}
+
+.adv-card__icon-wrap {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 25px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 54px;
+    height: 54px;
+    margin-bottom: 30px;
+  }
+}
+
+.adv-card__icon-wrap-leaf {
+  @media (min-width: $desktop-width) {
+    margin-bottom: -25px;
+  }
+}
+
+.adv-card__icon-shield,
+.adv-card__icon-crown,
+.adv-card__icon-boots,
+.adv-card__icon-route,
+.adv-card__icon-leaf {
+  position: relative;
+  display: block;
+  width: 42px;
+  height: 42px;
+  margin: 0;
+  padding: 0;
+  background-color: $base-white;
+  border: 1px solid $primary-blue;
+
+  @media (min-width: $tablet-width) {
+    width: 48px;
+    height: 48px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 54px;
+    height: 54px;
+  }
+}
+
+.adv-card__icon-shield {
+  &::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 24px;
+    height: 24px;
+    transform: translate(-50%, -50%);
+    background-color: $primary-blue;
+    mask-image: url("/__spritemap#sprite-icon-shield-adv-view");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 24px 24px;
+  }
+}
+
+.adv-card__icon-crown {
+  &::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 24px;
+    height: 24px;
+    transform: translate(-50%, -50%);
+    background-color: $primary-blue;
+    mask-image: url("/__spritemap#sprite-icon-crown-adv-view");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 24px 24px;
+  }
+}
+
+.adv-card__icon-boots {
+  &::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 22px;
+    height: 20px;
+    transform: translate(-50%, -50%);
+    background-color: $primary-blue;
+    mask-image: url("/__spritemap#sprite-icon-boots-adv-view");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 22px 20px;
+  }
+}
+
+.adv-card__icon-route {
+  &::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 24px;
+    height: 23px;
+    transform: translate(-50%, -50%);
+    background-color: $primary-blue;
+    mask-image: url("/__spritemap#sprite-icon-route-adv-view");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 24px 23px;
+  }
+}
+
+.adv-card__icon-leaf {
+  &::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 24px;
+    height: 17px;
+    transform: translate(-50%, -50%);
+    background-color: $primary-blue;
+    mask-image: url("/__spritemap#sprite-icon-leaf-adv-view");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 24px 17px;
+  }
+}
+
+.adv-card__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.adv-card__content h6 {
+  margin: 0;
+  margin-bottom: 15px;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 14px;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 18px;
+    line-height: 18px;
+  }
+}
+
+.adv-card__content p {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-weight: 400;
+
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+.adv-card__content-shield br {
+  display: block;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.adv-card__content-shield span {
+  display: inline;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}
+
+.adv-card__content-crown p {
+  @media (min-width: $desktop-width) {
+    max-width: 307px;
+  }
+}
+
+.adv-card__content-crown br {
+  display: block;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.adv-card__content-crown span {
+  display: inline;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    word-wrap: break-word;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: inline;
+    word-wrap: none;
+  }
+}
+
+.adv-card__content-boots p {
+  @media (min-width: $tablet-width) {
+    max-width: 255px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 340px;
+  }
+}
+
+.adv-card__content-boots br {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}
+
+.adv-card__content-boots span {
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: inline;
+  }
+}
+
+.adv-card__content-boots b {
+  display: block;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  word-wrap: break-word;
+
+  @media (min-width: $tablet-width) {
+    display: inline;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    word-wrap: normal;
+  }
+}
+
+.adv-card__content-route {
+  margin-bottom: 1px;
+}
+
+.adv-card__content-route b {
+  display: block;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  word-wrap: break-word;
+
+  @media (min-width: $tablet-width) {
+    display: inline;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    word-wrap: normal;
+  }
+}
+
+.adv-card__content-route span {
+  @media (min-width: $tablet-width) {
+    display: block;
+    word-wrap: break-word;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: inline;
+    word-wrap: normal;
+  }
+}
+
+.adv-card__content-route br {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}
+
+
+.adv-card__content-leaf b {
+  display: block;
+  margin-left: -4px;
+  font-weight: 600;
+  overflow-wrap: break-word;
+
+  @media (min-width: $desktop-width) {
+    display: inline;
+    overflow-wrap: normal;
+  }
+}

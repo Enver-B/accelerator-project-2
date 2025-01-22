@@ -1,0 +1,183 @@
+.instructor-card__wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  max-width: 290px;
+  margin: 0;
+  padding: 15px;
+  background-color: $base-white;
+  border: 1px solid $primary-blue-soft-opacity;
+
+  @media (min-width: $tablet-width) {
+    min-height: 388px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 356px;
+  }
+}
+
+.instructor-card__content {
+  position: relative;
+  min-width: 260px;
+
+  @media (min-width: $tablet-width) {
+    min-width: 183px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 255px;
+  }
+}
+
+.instructor-card__icon-vk-link {
+  position: absolute;
+  content: "";
+  display: block;
+  top: -1px;
+  right: 0;
+  width: 24px;
+  height: 24px;
+  background-color: $base-white;
+  border: 1px solid $primary-charcoal-soft-opacity;
+  cursor: pointer;
+
+  &:hover {
+    border: 1px solid $primary-charcoal;
+  }
+
+  &:focus {
+    border: 1px solid transparent;
+  }
+
+  &:active {
+    background-color: $primary-blue;
+    border: 1px solid transparent;
+  }
+
+  &--disabled {
+    pointer-events: none;
+    border: 1px solid $primary-charcoal-soft-opacity;
+    cursor: default;
+  }
+
+  &--disabled:hover,
+  &--disabled:active {
+    border: 1px solid $primary-charcoal-soft-opacity;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    width: 14px;
+    height: 8px;
+    transform: translate(-50%, -50%);
+    background-color: $primary-charcoal;
+    mask-image: url("/__spritemap#sprite-icon-vk-instructor-view");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 14px 8px;
+  }
+
+  &:hover::after {
+    background-color: $primary-charcoal;
+  }
+
+  &:focus::after {
+    background-color: $primary-charcoal;
+  }
+
+  &:active::after {
+    background-color: $base-white;
+  }
+
+  &--disabled::after {
+    pointer-events: none;
+    background-color: $primary-charcoal-soft-opacity;
+    cursor: default;
+  }
+
+  &--disabled:hover::after,
+  &--disabled:active::after {
+    background-color: $primary-charcoal-soft-opacity;
+  }
+}
+
+.instructor-card__text-wrap h6 {
+  max-width: 120px;
+  margin: 0;
+  margin-bottom: 14px;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  text-align: left;
+}
+
+.instructor-card__text-wrap p {
+  max-width: 240px;
+  margin: 0;
+  padding: 0;
+  line-height: 16px;
+  text-align: left;
+
+  @media (min-width: $desktop-width) {
+    max-width: 255px;
+  }
+}
+
+.instructor-card__text-wrap span {
+  @media (min-width: $tablet-width) {
+    display: block;
+    word-wrap: break-word;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: inline;
+    word-wrap: normal;
+  }
+}
+
+.instructor-card__text-wrap br {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}
+
+.instructor-card__image-wrap {
+  display: block;
+  width: 260px;
+  height: 200px;
+  background-color: $base-light-grey;
+
+  @media (min-width: $tablet-width) {
+    width: 183px;
+    height: 200px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 255px;
+    height: 200px;
+  }
+}
+
+.instructor-card__image {
+  display: block;
+  width: 260px;
+  height: 200px;
+
+  @media (min-width: $tablet-width) {
+    width: 183px;
+    height: 200px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 255px;
+    height: 200px;
+  }
+}

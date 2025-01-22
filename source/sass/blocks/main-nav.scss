@@ -1,0 +1,120 @@
+.main-nav {
+  @media (max-width: $desktop-width-only) {
+    &--closed .main-nav__wrap {
+      display: none;
+      max-height: 0;
+    }
+
+    &--opened .main-nav__wrap {
+      position: absolute;
+      display: block;
+      top: 85px;
+      left: 0;
+      margin: 0;
+      padding: 0;
+      padding-top: 30px;
+      padding-bottom: 50px;
+      width: 100%;
+      background-color: $primary-blue;
+      z-index: 10;
+      min-height: 300px;
+      transition: max-height 0.8s ease;
+
+      @media (min-width: $tablet-width) {
+        top: 80px;
+        min-height: 350px;
+        padding: 50px 45px 70px;
+      }
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    top: 0;
+    left: 0;
+  }
+}
+
+.main-nav__list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 22px;
+  max-width: 295px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: $tablet-width) {
+    gap: 26px;
+    max-width: 678px;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    max-width: 838px;
+    margin: 0;
+  }
+}
+
+.main-nav__link {
+  margin: 0;
+  padding: 3px 5px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 14px;
+  letter-spacing: 0.04em;
+  text-align: left;
+  color: $base-white;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-radius: 0;
+  outline: none;
+  cursor: pointer;
+
+  &:hover {
+    border-bottom: 1px solid $base-white;
+  }
+
+  &:focus {
+    border: 1px solid $base-white;
+  }
+
+  &:active {
+    color: $primary-dark-blue;
+    border: 1px solid transparent;
+  }
+
+  &--disabled {
+    pointer-events: none;
+    color: $base-grey;
+    cursor: default;
+  }
+
+  &--disabled:hover,
+  &--disabled:active {
+    color: $base-grey;
+    border: 1px solid transparent;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: normal;
+    text-transform: none;
+  }
+}

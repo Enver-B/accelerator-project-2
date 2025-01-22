@@ -1,0 +1,235 @@
+.about__wrap {
+  margin: 0;
+  padding: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 40px;
+    padding-right: 48px;
+    padding-bottom: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-content: flex-start;
+    padding-top: 100px;
+    padding-right: 0;
+    padding-bottom: 100px;
+  }
+}
+
+.about__image-bg-wrap {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  background-color: $primary-charcoal-pale-opacity;
+
+  @media (min-width: $tablet-width) {
+    justify-content: flex-start;
+    background-color: $base-white;
+  }
+}
+
+.about__image-wrap {
+  width: 320px;
+  height: 400px;
+  overflow: hidden;
+  background-color: $base-light-grey;
+
+  @media (min-width: $tablet-width) {
+    width: 450px;
+    height: 350px;
+    margin-top: 134px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 660px;
+    height: 498px;
+    margin-top: 0;
+  }
+}
+
+.about__image {
+  display: block;
+  width: 434px;
+  height: 400px;
+
+  @media (min-width: $tablet-width) {
+    width: 542px;
+    height: 350px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 660px;
+    height: 498px;
+  }
+}
+
+.about__content {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  max-width: 320px;
+  margin: 0 auto;
+  padding: 0 15px;
+  padding-top: 1px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    padding: 0;
+    max-width: 270px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 0;
+    max-width: 585px;
+  }
+}
+
+.about__content div {
+  margin: 0;
+  padding: 0;
+  max-width: 270px;
+
+  @media (min-width: $desktop-width) {
+    max-width: 585px;
+
+    &:nth-child(2) {
+      max-width: 570px;
+    }
+
+    &:nth-child(3) {
+      max-width: 585px;
+    }
+  }
+}
+
+.about__content h3 {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  padding-top: 16px;
+  padding-bottom: 17px;
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 22px;
+  text-align: left;
+
+  &::after {
+    position: absolute;
+    content: attr(title);
+    display: block;
+    top: 2px;
+    left: 0;
+    font-size: 26px;
+    font-weight: 800;
+    line-height: 26px;
+    text-align: left;
+    color: $primary-charcoal-pale-opacity;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 11px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-size: 25px;
+    line-height: 25px;
+    text-align: left;
+
+    &::after {
+      font-size: 40px;
+      line-height: 40px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 33px;
+    padding-top: 45px;
+    padding-bottom: 0;
+    font-size: 35px;
+    line-height: 35px;
+
+    &::after {
+      top: 8px;
+      font-size: 55px;
+      line-height: 55px;
+    }
+  }
+}
+
+.about__content h4 {
+  margin: 0;
+  margin-bottom: 13px;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 16px;
+  text-align: left;
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 19px;
+    font-size: 21px;
+    line-height: 21px;
+  }
+}
+
+.about__content p {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: left;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+  }
+}
+
+.about__content span {
+  display: block;
+  word-wrap: break-word;
+
+  @media (min-width: $tablet-width) {
+    display: inline;
+    word-wrap: normal;
+  }
+}
+
+.about__content strong {
+  display: inline;
+  font-weight: 400;
+  word-wrap: normal;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    word-wrap: break-word;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: inline;
+    word-wrap: normal;
+  }
+}
+
+.about__content br {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}

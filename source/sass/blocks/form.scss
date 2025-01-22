@@ -1,0 +1,52 @@
+.form__wrap {
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+}
+
+.form__contacts-form {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 320px;
+  height: 638px;
+  margin: 0 auto;
+  padding: 0;
+  background-color: $base-light-grey;
+  background-image:
+    image-set(url("../../img/form-bg-mobile@2x@1x.jpg") 1x type("image/jpg"),
+    url("../../img/form-bg-mobile@2x@2x.jpg") 2x type("image/jpg"),
+    url("../../img/form-bg-mobile@2x@1x.webp") 1x type("image/webp"),
+    url("../../img/form-bg-mobile@2x@2x.webp") 2x type("image/webp"));
+  background-repeat: no-repeat;
+  background-size: 122% 100%;
+  background-position: center;
+  z-index: 2;
+
+  @media (min-width: $tablet-width) {
+    width: 768px;
+    height: 680px;
+    margin-top: 2px;
+    background-color: $base-light-grey;
+    background-image:
+      image-set(url("../../img/form-bg-tablet@2x@1x.jpg") 1x type("image/jpg"),
+      url("../../img/form-bg-tablet@2x@2x.jpg") 2x type("image/jpg"),
+      url("../../img/form-bg-tablet@2x@1x.webp") 1x type("image/webp"),
+      url("../../img/form-bg-tablet@2x@2x.webp") 2x type("image/webp"));
+    background-size: 100% 100%;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1440px;
+    height: 760px;
+    margin-top: 0;
+    background-color: $base-light-grey;
+    background-image:
+      image-set(url("../../img/form-bg-desktop@2x@1x.jpg") 1x type("image/jpg"),
+      url("../../img/form-bg-desktop@2x@2x.jpg") 2x type("image/jpg"),
+      url("../../img/form-bg-desktop@2x@1x.webp") 1x type("image/webp"),
+      url("../../img/form-bg-desktop@2x@2x.webp") 2x type("image/webp"));
+    background-size: 1440px 760px;
+  }
+}
